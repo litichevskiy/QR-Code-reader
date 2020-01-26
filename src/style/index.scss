@@ -1,0 +1,15 @@
+@import 'reset';
+@import 'vars';
+@import 'mixins';
+@import 'default-classes';
+/*components*/
+@import 'app';
+@import 'components/loader/index';
+@import 'components/tab-navigation/index';
+@import 'components/tab-scanQRCode/index';
+@import 'components/alert/index';
+@import 'components/alert-copy-message/index';
+@import 'components/tab-createQRCode/index';
+/*components small-devices*/
+@import 'components/tab-navigation/small-devices';
+@import 'components/tab-createQRCode/small-devices';

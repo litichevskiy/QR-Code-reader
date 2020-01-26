@@ -1,0 +1,26 @@
+{
+  "name": "QR Code reader",
+  "short_name": "QR reader",
+  "start_url": "/",
+  "display": "standalone",
+  "description": "QR Code reader",
+  "background_color": "#f9f9f9",
+  "theme_color": "#9e9e9e",
+  "icons": [
+    {
+      "src": "images/manifest-icons/icon-64x64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "images/manifest-icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "images/manifest-icons/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+.app{
+  width: 100%;
+  height: calc( 100vh - #{$tab-navigation-height} );
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: $default-transition-time opacity ease-in-out;
+  opacity: 1;
+
+  &.disable{
+    opacity: 0;
+  }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>QR Code Reader</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#9e9e9e">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" type="text/css" href="dist/css/bundle.css">
+    <link rel="apple-touch-icon" sizes="128x128" href ="images/manifest-icons/icon-128x128.png">
+    <link rel="shortcut icon" sizes="16x16" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="loader">
+      <div class="loader-circle"></div>
+      <div class="loader-circle"></div>
+      <div class="loader-circle"></div>
+    </div>
+    <main class="app">
+      <!-- tab scan QRCode -->
+      <section class="tab tab-scanQRCode tab-wrapper" data-id="scan-qr-code">
+        <div class="alert alert-copy-message disable alert-copy-scanQRCode">
+          <div class="hidden-copied-content"></div>
+          <div class="wrapper-button-copy">
+            <button class="btn btn-copy">
+              copy
+              <img src="images/icons/copy.svg" class="icon" alt="copy">
+              <span class="copy-tooltip">Copied</span>
+            </button>
+          </div>
+          <div class="wrapper-alert-content">
+            <div class="alert-content"></div>
+          </div>
+          <div class="alert-navigation">
+            <button class="close-alert btn">
+              <img src="images/icons/arrow-left.svg" class="icon" alt="close">
+            </button>
+          </div>
+        </div>
+        <div class="container-video">
+          <button class="on-off-light btn">
+            <img src="images/icons/lamp.svg" class="icon" alt="on/off torch">
+          </button>
+          <video></video>
+          <canvas></canvas>
+          <div class="wrapper-stop-scan">
+            <button class="stop-scan btn">
+              <img src="images/icons/arrow-left.svg" class="icon" alt="stop">
+            </button>
+          </div>
+        </div>
+        <button class="start-scan btn">
+          <img src="images/icons/power.svg" class="icon" alt="start">
+        </button>
+      </section>
+      <!-- tab create QRCode -->
+      <section class="tab tab-createQRCode tab-wrapper" data-id="create-qr-code">
+        <canvas class="created-qr-code canvas"></canvas>
+        <form class="form-createQRCode">
+          <fieldset>
+            <legend>Create QR Code</legend>
+            <div class="container-input">
+              <span class="input-description">
+                max length
+                <span class="quantity-symbols">300</span>
+                symbols
+              </span>
+              <textarea class="createQRCode-input" placeholder="Your message"></textarea>
+              <span class="error-message"></span>
+            </div>
+            <div class="wrapper-button">
+              <button class="btn clear-text" type="button">Clear</button>
+              <button class="btn-createQRCode btn" type="submit">Generate</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+      <!-- navigation -->
+      <nav class="tab-navigation">
+        <button class="tab-btn btn" data-role="scan-qr-code">
+          <span class="tab-name">Scan</span>
+          <img class="icon" src="images/icons/qr-code.svg" alt="scan qr code">
+        </button>
+        <button class="tab-btn btn" data-role="create-qr-code">
+          <span class="tab-name">Create</span>
+          <img class="icon" src="images/icons/qr-code.svg" alt="create qr code">
+        </button>
+      </nav>
+      <!-- alert -error -->
+      <div class="alert disable alert-error">
+        <div class="alert-content"></div>
+        <div class="alert-navigation">
+          <button class="close-alert btn">
+            <img src="images/icons/arrow-left.svg" class="icon" alt="close">
+          </button>
+        </div>
+      </div>
+      <!-- defaut alert -->
+      <div class="alert disable defaut-alert">
+        <div class="alert-content"></div>
+        <div class="alert-navigation">
+          <button class="close-alert btn">
+            <img src="images/icons/arrow-left.svg" class="icon" alt="close">
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=Promise" crossorigin="anonymous"></script>
+    <script src="dist/js/bundle.js"></script>
+  </body>
+</html>

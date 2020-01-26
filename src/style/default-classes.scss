@@ -1,0 +1,45 @@
+.tab-wrapper{
+  padding: 1rem 0.7rem;
+}
+
+.default-shadow{
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),
+              0 3px 1px -2px rgba(0,0,0,.2),
+              0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.tab{
+  width: 100%;
+  height: 100%;
+  padding-bottom: $tab-navigation-height;
+  position: relative;
+  background-color: $tab-bg-color;
+  display: none;
+  overflow: auto;
+
+  &.tab-active{
+    @include flex-center(flex, center, center );
+  }
+}
+
+.btn,
+textarea{
+  outline: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+textarea{
+  border: 1px solid transparent;
+}
+
+@media( min-width: 960px ) {
+  .btn,
+  textarea{
+
+    &:focus{
+      border-color: blue !important;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.alert{
+  @include flex-center( flex, center, center );
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc( 100% - #{$tab-navigation-height} );
+  z-index: 2;
+  padding: 0.5rem 0.7rem;
+  background-color: $tab-bg-color;
+  overflow: auto;
+
+  &.disable{
+    display: none;
+  }
+
+  .alert-navigation{
+    @include flex-center( flex, center, center );
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $tab-navigation-height;
+    background-color: $primary-dark-grey;
+  }
+
+  .close-alert{
+    @include border-radius( 5px );
+    @extend .default-shadow;
+    background-color: $primary-lightgreen;
+    width: 150px;
+
+    .icon{
+      width: 38px;
+    }
+  }
+
+  .alert-content{
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}

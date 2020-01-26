@@ -1,0 +1,100 @@
+.tab-createQRCode{
+
+  fieldset{
+    @include border-radius( 3px );
+    border: 1px solid $primary-light-grey;
+    margin: 0;
+    padding: 0.6rem 0.4rem;
+  }
+
+  legend{
+    background-color: $tab-bg-color;
+  }
+
+  .form-createQRCode{
+    width: 700px;
+    margin: auto;
+  }
+
+  .error-message{
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    font-size: 0.9rem;
+  }
+
+  .container-input{
+    padding: 0.3rem 0;
+    position: relative;
+  }
+
+  .wrapper-button{
+    @include flex-center(flex, center, space-between );
+    width: 100%;
+    margin-top: 0.6rem;
+  }
+
+  .btn-createQRCode,
+  .clear-text{
+    @include border-radius( 3px );
+    @extend .default-shadow;
+    font-size: 1.2rem;
+    padding: 0.25rem 0.5rem;
+    color: #fff;
+    background-color: $primary-lightgreen;
+  }
+
+  .clear-text{
+    margin-right: 0.5rem;
+    background-color: $primary-dark-grey;
+  }
+
+  .input-description{
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+
+  .createQRCode-input{
+    @include border-radius( 3px );
+    padding: 0.4rem;
+    font-size: 1.1rem;
+    width: 100%;
+    resize: none;
+    min-height: 120px;
+    cursor: initial;
+    border-color: $primary-light-grey;
+
+    &.error{
+      border-color: $error-color;
+    }
+
+    &.error ~ .error-message{
+      display: inline-block;
+      color: $error-color;
+    }
+  }
+
+  .quantity-symbols{
+    width: 25px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+
+    &.error{
+      color: $error-color;
+    }
+  }
+}
+
+/*canvas with qr code*/
+
+.created-qr-code{
+  display: none;
+
+  &.show{
+    @extend .default-shadow;
+    display: block;
+  }
+}
