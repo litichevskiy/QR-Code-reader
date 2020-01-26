@@ -11,7 +11,7 @@ Promise.resolve( checkSupport.mediaDevices() )
 
   if( !response.isSupported ) throw new Error( response.message );
 
-  // swRegister();
+  swRegister();
 
   const alertError = new Alert({
     container: document.querySelector('.alert-error'),
