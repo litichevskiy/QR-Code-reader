@@ -96,5 +96,6 @@
   &.show{
     @extend .default-shadow;
     display: block;
+    margin: 0 auto;
   }
 }
