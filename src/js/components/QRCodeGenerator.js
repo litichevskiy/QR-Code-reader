@@ -35,6 +35,7 @@ class QRCodeGenerator {
   clear() {
     this.qrCodeInput.value = '';
     this.quantitySimbols.innerHTML = MAX_LENGTH_FOR_QRCODE;
+    this.quantitySimbols.classList.remove('error');
   }
 
   updateQuantitySymnols() {
@@ -81,10 +82,6 @@ class QRCodeGenerator {
 
     if( !this.isValidText( value ) ) {
       this.showError();
-      // this.invalidText = true;
-      // const errorEl = this.container.querySelector('.error-message');
-      // errorEl.innerHTML = this.errorText;
-      // this.qrCodeInput.classList.add('error');
 
     } else {
 

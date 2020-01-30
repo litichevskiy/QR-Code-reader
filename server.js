@@ -16,23 +16,7 @@ app.get('/', (req,res) => {
   res.sendFile(path.join(__dirname+'/index.html'));
 });
 
-if( process.env.USER === 'sl') {
-
-  const https = require('https');
-  const fs = require('fs');
-  const certOptions = {
-    key: fs.readFileSync('./cert/key.pem'),
-    cert: fs.readFileSync('./cert/certificate.pem'),
-  };
-
-  https.createServer( certOptions, app )
-  .listen( PORT, console.log(`server listening https://localhost:${PORT}`));
-
-} else {
-
-  app.listen( PORT, () => console.log(`server listening https://localhost:3000/ ${PORT}`));
-}
-
+app.listen( PORT, () => console.log(`server listening http://localhost:${PORT}`));
 
 function shouldCompress (req, res) {
   if (req.headers['x-no-compression']) return false;

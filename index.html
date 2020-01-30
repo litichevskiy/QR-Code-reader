@@ -22,15 +22,17 @@
       <section class="tab tab-scanQRCode tab-wrapper" data-id="scan-qr-code">
         <div class="alert alert-copy-message disable alert-copy-scanQRCode">
           <div class="hidden-copied-content"></div>
-          <div class="wrapper-button-copy">
-            <button class="btn btn-copy">
-              copy
-              <img src="images/icons/copy.svg" class="icon" alt="copy">
-              <span class="copy-tooltip">Copied</span>
-            </button>
-          </div>
-          <div class="wrapper-alert-content">
-            <div class="alert-content"></div>
+          <div class="wrapper-alert-max-width">
+            <div class="wrapper-button-copy">
+              <button class="btn btn-copy">
+                copy
+                <img src="images/icons/copy.svg" class="icon" alt="copy">
+                <span class="copy-tooltip">Copied</span>
+              </button>
+            </div>
+            <div class="wrapper-alert-content">
+              <div class="alert-content"></div>
+            </div>
           </div>
           <div class="alert-navigation">
             <button class="close-alert btn">
@@ -89,7 +91,9 @@
       </nav>
       <!-- alert -error -->
       <div class="alert disable alert-error">
-        <div class="alert-content"></div>
+        <div class="wrapper-alert-max-width">
+          <div class="alert-content"></div>
+        </div>
         <div class="alert-navigation">
           <button class="close-alert btn">
             <img src="images/icons/arrow-left.svg" class="icon" alt="close">
@@ -98,7 +102,9 @@
       </div>
       <!-- defaut alert -->
       <div class="alert disable defaut-alert">
-        <div class="alert-content"></div>
+        <div class="wrapper-alert-max-width">
+          <div class="alert-content"></div>
+        </div>
         <div class="alert-navigation">
           <button class="close-alert btn">
             <img src="images/icons/arrow-left.svg" class="icon" alt="close">
