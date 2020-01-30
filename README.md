@@ -11,6 +11,6 @@ npm install
 ```
 npm run build
 ```
-and open: [localhost:3000](https://localhost:3000)
+and open: [localhost:3000](http://localhost:3000)
 
 or see [qr-code-reader](https://ls-qr-code-reader.herokuapp.com/)
