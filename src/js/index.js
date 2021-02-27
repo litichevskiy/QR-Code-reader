@@ -6,7 +6,10 @@ import TabNavigation from './components/TabNavigation';
 import Alert from './components/Alert';
 import AlertCopyMessage from './components/AlertCopyMessage';
 
+
 document.addEventListener('DOMContentLoaded', () => {
+
+  require('focus-visible');
 
   Promise.resolve( checkSupport.mediaDevices() )
   .then( response => {
@@ -83,16 +86,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const showApp = () => {
+
   const app = document.querySelector('.app');
   const loader = document.querySelector('.loader');
 
-  const removeLoader = () => {
-    loader.removeEventListener('transitionend', removeLoader );
-    document.body.removeChild( loader );
-  };
-
-  loader.addEventListener('transitionend', removeLoader );
-
-  app.classList.remove('disable');
   loader.classList.add('disable');
+
+  setTimeout(() => {
+    app.classList.remove('disable');
+    document.body.removeChild( loader );
+  }, 100);
 };

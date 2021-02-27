@@ -1,33 +1,33 @@
 .tab-navigation{
-  background-color: $primary-dark-grey;
-  position: fixed;
-  width: 100%;
-  height: $tab-navigation-height;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 1;
-
-  .tab-btn{
-    @include border-radius( 5px );
-    @extend .default-shadow;
-    @include flex-center( flex, center, center );
-    margin: 0 1.7rem;
-    padding: 0.25rem 0.8rem;
-    font-size: 1.4rem;
-    background-color: #fff;
-    color: black;
-
-    &.btn-active{
-      background-color: $primary-lightgreen;
-      color: #fff;
-    }
-  }
 
   .icon{
     width: 28px;
     margin-left: 0.8rem;
+  }
+
+  .icon-active{
+    display: none;
+  }
+
+  .tab-btn{
+    @include flex-center( flex, center, center );
+    margin: 0 1.7rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
+    background-color: #fff;
+    color: black;
+
+    &.btn-active{
+      color: $primary-blue;
+
+      .icon{
+        display: none;
+      }
+
+      .icon-active{
+        display: inline-block;
+      }
+    }
   }
 }

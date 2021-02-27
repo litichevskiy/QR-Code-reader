@@ -50,26 +50,7 @@
     }
   }
 
-  .wrapper-stop-scan{
-    @include flex-center( flex, center, center );
-    height: $tab-navigation-height;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-
   .stop-scan{
-    @include border-radius( 5px );
-    position: relative;
-    padding: 0.15rem 0;
     z-index: 1;
-    background-color: $primary-lightgreen;
-    width: 150px;
-
-    .icon{
-      width: 38px;
-      vertical-align: middle;
-    }
   }
 }

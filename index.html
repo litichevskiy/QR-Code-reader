@@ -34,8 +34,9 @@
               <div class="alert-content"></div>
             </div>
           </div>
-          <div class="alert-navigation">
-            <button class="close-alert btn">
+          <div class="alert-navigation navigation">
+            <button class="close-alert btn btn--text-icon">
+              <span class="title">Back</span>
               <img src="images/icons/arrow-left.svg" class="icon" alt="close">
             </button>
           </div>
@@ -46,9 +47,10 @@
           </button>
           <video></video>
           <canvas></canvas>
-          <div class="wrapper-stop-scan">
-            <button class="stop-scan btn">
+          <div class="wrapper-stop-scan navigation">
+            <button class="stop-scan btn btn--text-icon">
               <img src="images/icons/arrow-left.svg" class="icon" alt="stop">
+              <span class="title">Back</span>
             </button>
           </div>
         </div>
@@ -73,20 +75,22 @@
             </div>
             <div class="wrapper-button">
               <button class="btn clear-text" type="button">Clear</button>
-              <button class="btn-createQRCode btn" type="submit">Generate</button>
+              <button class="btn-createQRCode btn" type="submit">Create</button>
             </div>
           </fieldset>
         </form>
       </section>
       <!-- navigation -->
-      <nav class="tab-navigation">
+      <nav class="tab-navigation navigation">
         <button class="tab-btn btn" data-role="scan-qr-code">
           <span class="tab-name">Scan</span>
           <img class="icon" src="images/icons/qr-code.svg" alt="scan qr code">
+          <img class="icon icon-active" src="images/icons/qr-code-active.svg" alt="scan qr code">
         </button>
         <button class="tab-btn btn" data-role="create-qr-code">
           <span class="tab-name">Create</span>
           <img class="icon" src="images/icons/qr-code.svg" alt="create qr code">
+          <img class="icon icon-active" src="images/icons/qr-code-active.svg" alt="scan qr code">
         </button>
       </nav>
       <!-- alert -error -->
@@ -94,8 +98,9 @@
         <div class="wrapper-alert-max-width">
           <div class="alert-content"></div>
         </div>
-        <div class="alert-navigation">
-          <button class="close-alert btn">
+        <div class="alert-navigation navigation">
+          <button class="close-alert btn btn--text-icon">
+            <span class="title">Back</span>
             <img src="images/icons/arrow-left.svg" class="icon" alt="close">
           </button>
         </div>
@@ -105,9 +110,10 @@
         <div class="wrapper-alert-max-width">
           <div class="alert-content"></div>
         </div>
-        <div class="alert-navigation">
-          <button class="close-alert btn">
+        <div class="alert-navigation navigation">
+          <button class="close-alert btn btn--text-icon">
             <img src="images/icons/arrow-left.svg" class="icon" alt="close">
+            <span class="title">Back</span>
           </button>
         </div>
       </div>

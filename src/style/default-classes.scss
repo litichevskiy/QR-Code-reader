@@ -30,16 +30,33 @@ textarea{
   font-family: inherit;
 }
 
-textarea{
-  border: 1px solid transparent;
-}
+.btn{
 
-@media( min-width: 960px ) {
-  .btn,
-  textarea{
+  &--text-icon{
+    @extend .default-shadow;
+    @include border-radius( 5px );
+    @include flex-center( inline-flex, center, space-around );
+    width: 150px;
+    background-color: #dfdfdf;
+    color: $primary-blue;
 
-    &:focus{
-      border-color: blue !important;
+    .title{
+      font-size: 1.2rem;
     }
   }
+}
+
+.navigation{
+  @include flex-center( flex, center, center );
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: $tab-navigation-height;
+  border-top: 1px solid $primary-light-grey;
+  background-color: #FFF;
+}
+
+textarea{
+  border: 1px solid transparent;
 }

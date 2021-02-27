@@ -9,10 +9,11 @@
     "build": "NODE_ENV=production webpack"
   },
   "dependencies": {
-    "express": "*",
     "compression": "^1.7.3",
-    "webpack": "^3.5.5",
-    "heroku-ssl-redirect": "0.0.4"
+    "express": "*",
+    "focus-visible": "^5.2.0",
+    "heroku-ssl-redirect": "0.0.4",
+    "webpack": "^3.5.5"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

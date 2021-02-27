@@ -1,8 +1,7 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  height="512pt"
   viewBox="0 0 512 512"
-  width="512pt">
+  width="35">
   <path fill='#e91e63' d="m30 30h90v-30h-120v120h30zm0 0"/>
   <path fill='#e91e63' d="m392 0v30h90v90h30v-120zm0 0"/>
   <path fill='#e91e63' d="m482 482h-90v30h120v-120h-30zm0 0"/>
