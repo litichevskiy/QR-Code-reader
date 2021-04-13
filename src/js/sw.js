@@ -1,4 +1,4 @@
-const CACHE_NAME = ['v-1-1614460614195'];
+const CACHE_NAME = ['v-1-1618350140156'];
 
 const FILES_TO_CACHE = [
   '/',
@@ -11,6 +11,7 @@ const FILES_TO_CACHE = [
   'images/icons/lamp.svg',
   'images/icons/power.svg',
   'images/icons/qr-code.svg',
+  'images/icons/qr-code-active.svg'
 ];
 
 self.addEventListener('activate', ( event ) => {
