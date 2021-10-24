@@ -23,5 +23,5 @@ export const OPTIONS_QR_CODE_GENERATOR = {
   }
 };
 
-export const MAX_LENGTH_FOR_QRCODE = 300; // symbols
+export const MAX_LENGTH_FOR_QRCODE = 600; // symbols
 export const MIN_LENGTH_FOR_QRCODE = 1; // symbol

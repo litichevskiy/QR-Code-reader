@@ -20,6 +20,7 @@ class QRCodeGenerator {
     this.quantitySimbols = quantitySymbols;
     this.btnClear = btnClear;
     this.invalidText = false;
+    this.quantitySimbols.innerHTML = MAX_LENGTH_FOR_QRCODE;
 
     this.generateQRCode = this.generateQRCode.bind( this );
     this.disableError = this.disableError.bind( this );

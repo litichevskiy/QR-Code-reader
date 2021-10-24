@@ -8,7 +8,6 @@
   z-index: 2;
   padding: 0.5rem 0.7rem;
   background-color: $tab-bg-color;
-  overflow: auto;
 
   &.disable{
     display: none;
@@ -20,7 +19,8 @@
 
   .alert-content{
     font-size: 1.4rem;
-    text-align: center;
+    padding: 0.2rem 0.3rem;
     word-break: break-all;
+    white-space: pre-wrap;
   }
 }
