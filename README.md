@@ -14,5 +14,3 @@ npm run dev
 and open: [localhost:3000](http://localhost:3000)
 
 If you want testing this app in other devices you need add certificate and use https
-
-or see [qr-code-reader](https://ls-qr-code-reader.herokuapp.com/)
