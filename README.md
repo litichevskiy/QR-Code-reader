@@ -1,6 +1,6 @@
 ## QR Code Reader
 
-This app for reading and creating qr code
+This app for reading and creating qr code.
 
 #### Installation
 
