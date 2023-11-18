@@ -20,13 +20,3 @@ function shouldCompress (req, res) {
   if (req.headers['x-no-compression']) return false;
   else return compression.filter(req, res);
 };
-
-/*
-
-"css-loader": "^0.28.7",
-    "sass-loader": "^7.1.0",
-    "node-sass": "^4.14.1",
-    "postcss-loader": "^2.1.6",
-    "style-loader": "^1.3.0",
-
-*/

@@ -8,20 +8,10 @@ const IS_PRODUCTION = NODE_ENV === "production";
 
 module.exports = [
   {
-    entry: ['./src/js/sw.js'],
-    output: {
-      path: path.resolve(__dirname, './dist/js'),
-      filename: 'sw.js',
-    },
-    plugins:[],
-    watch: !IS_PRODUCTION,
-    mode: NODE_ENV,
-    devtool: IS_PRODUCTION ? false : 'source-map',
-  },
-  {
     entry: {
-      bundle: ['./src/js/index.js'],
-      css: ['./src/style/index.scss']
+      bundle: './src/js/index.js',
+      sw: './src/js/sw.js',
+      css: './src/style/index.scss'
     },
     output: {
       path: path.resolve(__dirname, './dist/js'),
@@ -30,6 +20,9 @@ module.exports = [
     },
     resolve: {
       extensions: [' ', '.js', '.scss', 'css'],
+    },
+    watchOptions: {
+      ignored: /node_modules/,
     },
     plugins: [
       new CleanWebpackPlugin(),
