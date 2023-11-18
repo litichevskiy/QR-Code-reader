@@ -3,9 +3,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const compression = require('compression');
-const sslRedirect = require('heroku-ssl-redirect');
 
-app.use( sslRedirect(['other','development','production']));
 app.use( compression({ filter: shouldCompress }));
 
 app.use('/sw.js', express.static( __dirname + '/dist/js/sw.js'));
@@ -22,3 +20,13 @@ function shouldCompress (req, res) {
   if (req.headers['x-no-compression']) return false;
   else return compression.filter(req, res);
 };
+
+/*
+
+"css-loader": "^0.28.7",
+    "sass-loader": "^7.1.0",
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^2.1.6",
+    "style-loader": "^1.3.0",
+
+*/

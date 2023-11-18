@@ -1,3 +1,8 @@
+/******/ (function() { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!**********************!*\
+  !*** ./src/js/sw.js ***!
+  \**********************/
 const CACHE_NAME = ['v-1-1700317392396'];
 
 const FILES_TO_CACHE = [
@@ -44,3 +49,6 @@ self.addEventListener('fetch', ( event ) => {
     })
   );
 });
+/******/ })()
+;
+//# sourceMappingURL=sw.js.map

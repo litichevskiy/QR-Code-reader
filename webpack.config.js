@@ -1,8 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const autoprefixer = require('autoprefixer');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 const NODE_ENV = process.env.NODE_ENV || "development";
 const IS_PRODUCTION = NODE_ENV === "production";
 
@@ -15,6 +15,8 @@ module.exports = [
     },
     plugins:[],
     watch: !IS_PRODUCTION,
+    mode: NODE_ENV,
+    devtool: IS_PRODUCTION ? false : 'source-map',
   },
   {
     entry: {
@@ -30,55 +32,49 @@ module.exports = [
       extensions: [' ', '.js', '.scss', 'css'],
     },
     plugins: [
-      new ExtractTextPlugin('../css/bundle.css'),
+      new CleanWebpackPlugin(),
+      new MiniCssExtractPlugin({
+        filename: "../css/bundle.css",
+        chunkFilename: "[id].css",
+      }),
       new webpack.DefinePlugin ({
         'process.env.NODE_ENV': JSON.stringify ( NODE_ENV )
-      })
+      }),
     ],
-    devtool: IS_PRODUCTION ? 'none' : 'source-map',
+    mode: NODE_ENV,
+    devtool: IS_PRODUCTION ? false : 'source-map',
     watch: !IS_PRODUCTION,
     module: {
       rules: [
         {
-          test: /\.js$/,
-          exclude: /\/node_modules\//,
-          use: {
-              loader: 'babel-loader',
-              options: {
-                  presets: ["@babel/preset-env"]
-              }
-          }
+          test: /\.(js)$/,
+          exclude: /node_modules/,
+          use: ['babel-loader']
         },
         {
           exclude: /\/node_modules\//,
           test: /\.scss$/,
-          use: ExtractTextPlugin.extract({
-            use: [
-              {
-                loader: 'css-loader',
-                options: {sourceMap: !IS_PRODUCTION, minimize:  IS_PRODUCTION}
-              },
-              {
-                loader: 'postcss-loader',
-                options: {
-                  plugins: [autoprefixer({browsers:['last 5 version']})],
-                  sourceMap: !IS_PRODUCTION
-                }
-              },
-              {
-                loader: 'sass-loader',
-                options: {sourceMap: !IS_PRODUCTION}
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader
+            },
+            {
+              loader: 'css-loader',
+              options: {sourceMap: !IS_PRODUCTION}
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: !IS_PRODUCTION
               }
-            ]
-          })
+            },
+            {
+              loader: 'sass-loader',
+              options: {sourceMap: !IS_PRODUCTION}
+            }
+          ]
         }
       ]
     }
   }
 ];
-
-if( IS_PRODUCTION ) {
-  module.exports.forEach( item => {
-    item.plugins.push( new UglifyJsPlugin({ uglifyOptions: { minimize: true }}) );
-  });
-};
